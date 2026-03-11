@@ -9,7 +9,9 @@ st.set_page_config(page_title="Soul Dog Matcher 2026", page_icon="🐶")
 def load_data():
     df = pd.read_csv("akc-data-latest.csv",encoding='ISO-8859-1',on_bad_lines='skip',engine='python')
     return df
-
+    df.rename(columns={df.columns[0]: 'Breed'}, inplace=True)
+    df.set_index('Breed', inplace=True)
+    return df
 df = load_data()
 
 # 2. USER INTERFACE
@@ -82,6 +84,7 @@ if submitted:
     else:
 
         st.error("No breeds matched those specific criteria. Try loosening your size or family filters!")
+
 
 
 
