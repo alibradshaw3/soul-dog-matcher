@@ -1,4 +1,4 @@
-Soul Mutt Matcher 2026
+Soul Dog Matcher 2026
 
 An interactive web application that helps potential dog owners find a breed that matches their lifestyle using real-world AKC data.
 
